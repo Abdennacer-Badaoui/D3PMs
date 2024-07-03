@@ -1,7 +1,7 @@
 # Structured Denoising Diffusion Models in Discrete State-Spaces
 The paper "Structured Denoising Diffusion Models in Discrete State-Spaces" introduces Discrete Denoising Diffusion Probabilistic Models (D3PMs), a generative model for discrete data that builds upon the success of Denoising Diffusion Probabilistic Models (DDPMs) in continuous spaces.
 
-Paper : https://arxiv.org/pdf/2107.03006
+Structured Denoising Diffusion Models in Discrete State-Spaces by Austin et al.: https://arxiv.org/pdf/2107.03006
 ## Diffusion Models for Discrete State Spaces
 Diffusion models typically operate on continuous data like image pixels. This paper introduces a new approach called Discrete Denoising Diffusion Probabilistic Models (D3PMs) for data with a finite set of values, such as images with discrete color levels or text with a specific alphabet. D3PMs achieve this by employing a series of diffusion steps. In each step, a transition matrix, which captures the probability of transitioning from one state (e.g., a specific pixel value) to another, is used to gradually corrupt the data with noise. The model then learns to reverse this process, effectively denoising the data and generating new samples from the underlying distribution. This framework allows for incorporating domain knowledge by designing structured transition matrices that reflect specific data characteristics.
 
