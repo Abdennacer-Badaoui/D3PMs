@@ -100,7 +100,10 @@ Once the model reverse process is known, we can use it to generate samples from 
 
 $$ x_{T} \rightarrow x_{T-1} \rightarrow \ldots \rightarrow x_{0} $$
 
-![Image 3 chris](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/dc6abc96-614d-4e33-b280-01af8f728c21)
+## Use case (Diffusion on the Discrete Space of Dish Names)
+
+In this project, we explore the application of categorical diffusion processes to the Food101 dataset, focusing on the task of food classification by conditioning on image features. Although a simple convolutional neural network (CNN) could be employed to achieve effective image classification, our aim is to delve into the emerging domain of categorical diffusion. By iteratively denoising random category indices and conditioning on the rich semantic embeddings provided by the images, we investigate the potential of diffusion models in handling categorical data. This approach not only broadens our understanding of diffusion processes in discrete spaces but also opens up new avenues for leveraging such models in various classification tasks.
+
 
 
 
