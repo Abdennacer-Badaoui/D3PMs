@@ -52,3 +52,40 @@ Examples of Transition Matrices:
 - **Absorbing State Matrices**: In an absorbing state matrix, certain states are designated as absorbing states. Once the process transitions into an absorbing state, it remains there indefinitely. For example, if state $K$ is an absorbing state, once the process reaches state $K$, it will stay in state $K$ and not transition to any other state.
 - **Discretized Gaussian Matrices**: In a discretized Gaussian transition matrix, the probability of transitioning from one state to another is based on a Gaussian distribution. States that are closer to each other have higher transition probabilities, while states that are further apart have lower transition probabilities. This creates a smooth transition pattern where the process is more likely to move to nearby states.
 
+
+## Forward Process in D3PMs
+
+The forward process in D3PMs refers to the gradual corruption of clean data with noise over a series of discrete steps. This process relies on categorical distributions, transition matrices, and the crucial property of convergence to a stationary distribution. Here's a breakdown with mathematical notation:
+
+### 1. Initial State
+
+We start with clean data $x$ represented by a categorical distribution $q(x) = [q(x_1), q(x_2), \ldots, q(x_K)]$.
+Each element $q(x_i)$ signifies the probability of $x$ belonging to category $x_i$.
+
+### 2. Diffusion Steps
+
+The corruption unfolds over $T$ diffusion steps ($t = 0$ to $T-1$):
+
+- In each step $t$, a transition matrix $Q_t$ (size $K \times K$) is applied.
+- This matrix encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $t$: $Q_t(x_i, x_j)$.
+
+#### Mathematical Notation
+
+The core of the forward process is iteratively updating the data distribution based on the transition matrix:
+
+$$ q(x_{t+1} \mid x_{t}) = Q_t q(x_t) $$
+
+The resulting $q(x_{t+1})$ represents the distribution of the data after noise is added in step $t$.
+
+### 3. Iterative Corruption and Convergence
+
+This process is repeated for all steps, with each $Q_t$ potentially different. However, there's a crucial constraint:
+- The rows of the cumulative product $M_t = Q_1 \cdot Q_2 \cdot \ldots \cdot Q_t$ (representing the overall transition across all steps up to $t$) must converge to a known stationary distribution as $t$ approaches infinity.
+
+#### Stationary Distribution
+
+A stationary distribution, denoted by $\pi = [\pi_1, \pi_2, \ldots, \pi_K]$, is a fixed point of the diffusion process. For a large number of corruption steps, we expect $q(x_{t}) \approx \pi$. This means:
+
+In simpler terms, after a sufficient number of diffusion steps, the data distribution stops changing and reaches a steady state represented by the stationary distribution, that we can use to sample from in the backward process.
+
+
