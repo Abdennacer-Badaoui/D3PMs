@@ -106,7 +106,9 @@ $$ x_{T} \rightarrow x_{T-1} \rightarrow \ldots \rightarrow x_{0} $$
 
 In this project, we explore the application of categorical diffusion processes to the Food101 dataset, focusing on the task of food classification by conditioning on image features. Although a simple convolutional neural network (CNN) could be employed to achieve effective image classification, our aim is to delve into the emerging domain of categorical diffusion. Our discrete space consists of 101 states, corresponding to the 101 categories of food in the dataset. By iteratively denoising random category indices and conditioning on the rich semantic embeddings provided by the images, we investigate the potential of diffusion models in handling categorical data. This approach not only broadens our understanding of diffusion processes in discrete spaces but also opens up new avenues for leveraging such models in various classification tasks.
 
-![dataset-cover](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/e8d608d7-8914-4b7c-994c-2f2764c56051)
+<p align="center">
+  <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/e8d608d7-8914-4b7c-994c-2f2764c56051" alt="Dataset Cover">
+</p>
 
 
 
