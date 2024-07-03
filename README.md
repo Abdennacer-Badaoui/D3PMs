@@ -9,13 +9,16 @@ Diffusion models typically operate on continuous data like image pixels. This pa
 
 ## Categorical Distribution
 
-Imagine a data point \( x \) that can take on one of \( K \) possible values (\( x \in \{x_1, x_2, \ldots, x_K\} \)). A categorical distribution describes the probability of \( x \) belonging to each category. This is represented by a probability vector \( q(x) = [q(x_1), q(x_2), \ldots, q(x_K)] \), where each element \( q(x_i) \) signifies the probability of \( x \) taking the value \( x_i \). The sum of all probabilities in the vector equals 1:
+Imagine a data point $ x $ that can take on one of $ K $ possible values ($ x \in \{x_1, x_2, \ldots, x_K\} $). A categorical distribution describes the probability of $ x $ belonging to each category. This is represented by a probability vector $ q(x) = [q(x_1), q(x_2), \ldots, q(x_K)] $, where each element $ q(x_i) $ signifies the probability of $ x $ taking the value $ x_i $. The sum of all probabilities in the vector equals 1:
 
-\[ \sum_{i=1}^{K} q(x_i) = 1 \]
+$$
+\sum_{i=1}^{K} q(x_i) = 1 
+$$
+
 
 ## Transition Matrices
 
-The diffusion process in D3PMs is governed by a sequence of transition matrices, one for each diffusion step \( t \) (from 0 to \( T-1 \)). Each transition matrix, denoted by \( Q_t \), is a square matrix of size \( K \times K \). It encodes the probability of transitioning from any state \( x_i \) to any other state \( x_j \) during step \( t \):
+The diffusion process in D3PMs is governed by a sequence of transition matrices, one for each diffusion step $t$ (from 0 to $ T-1 $). Each transition matrix, denoted by $ Q_t $, is a square matrix of size $ K \times K $. It encodes the probability of transitioning from any state $ x_i $ to any other state $ x_j $ during step $ t $:
 
 \[ Q_t(x_i, x_j) \]
 
