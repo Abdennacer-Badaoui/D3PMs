@@ -88,4 +88,19 @@ A stationary distribution, denoted by $\pi = [\pi_1, \pi_2, \ldots, \pi_K]$, is 
 
 In simpler terms, after a sufficient number of diffusion steps, the data distribution stops changing and reaches a steady state represented by the stationary distribution, that we can use to sample from in the backward process.
 
+## Backward Process
+
+So far we have shown how to distort the original data distribution $q(x_{0})$ into $\pi(x_{T})$ with iterative addition of tractable noise. The noise here is introduced via a Markov transition matrix. However, the key ingredient of D3 models is a learned reverse process, which attempts to iteratively undo the corruption of the forward process. The reverse process is also defined via a Markov chain:
+
+$$ p_{\theta}(x_{t-1} \mid x_{t}) = P_{\theta} \cdot p(x_{t}) $$
+
+Note that the reverse process is conditioned on forward-looking time steps. Here the Markov transition matrix is parameterized somehow, and could actually also depend on the conditioning variable $x_{t}$. In fact, in most published diffusion models, $P_{\theta}$ is actually a neural network with arguments $x_{t}$ and $t$.
+
+Once the model reverse process is known, we can use it to generate samples from the data distribution $p(x_0)$ by first sampling $x_{T} \sim \pi = p(x_{T})$, then iteratively generating the sequence:
+
+$$ x_{T} \rightarrow x_{T-1} \rightarrow \ldots \rightarrow x_{0} $$
+
+![Image 3 chris](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/dc6abc96-614d-4e33-b280-01af8f728c21)
+
+
 
