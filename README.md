@@ -20,15 +20,21 @@ $$
 
 The diffusion process in D3PMs is governed by a sequence of transition matrices, one for each diffusion step $t$ (from 0 to $T-1$). Each transition matrix, denoted by $Q_t$, is a square matrix of size $K \times K$. It encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $t$:
 
-\[ Q_t(x_i, x_j) \]
+$$
+Q_t(x_i, x_j)
+$$
 
 Here, $Q_t(x_i, x_j)$ represents the probability of transitioning from state $x_i$ to state $x_j$ in step $t$.
 
-\[ \sum_{j=1}^{K} Q_t(x_i, x_j) = 1, \quad \text{for all} \; i \in \{1, 2, \ldots, K\} \]
+$$
+\sum_{j=1}^{K} Q_t(x_i, x_j) = 1, \quad \text{for all} \; i \in \{1, 2, \ldots, K\}
+$$
 
 These transition matrices essentially define the "corruption process" at each step. By multiplying the current data distribution $q(x_t)$ with the transition matrix $Q_t$, we obtain the distribution of the data $q(x_{t+1})$ after the noise is added in step $t$:
 
-\[ q(x_{t+1} \mid x_t) = Q_t \cdot q(x_t) \]
+$$
+q(x_{t+1} \mid x_t) = Q_t \cdot q(x_t)
+$$
 
 In essence, the categorical distribution captures the probabilities of the data points across different categories, while the transition matrices govern how these probabilities evolve with the noise injection during the diffusion process.
 
