@@ -9,7 +9,7 @@ Diffusion models typically operate on continuous data like image pixels. This pa
 
 ## Categorical Distribution
 
-Imagine a data point $ \x $ that can take on one of $ K $ possible values ($ x \in \{x_1, x_2, \ldots, x_K\} $). A categorical distribution describes the probability of $ x $ belonging to each category. This is represented by a probability vector $ q(x) = [q(x_1), q(x_2), \ldots, q(x_K)] $, where each element $ q(x_i) $ signifies the probability of $ x $ taking the value $ x_i $. The sum of all probabilities in the vector equals 1:
+Imagine a data point $x$ that can take on one of $ K $ possible values ($ x \in \{x_1, x_2, \ldots, x_K\} $). A categorical distribution describes the probability of $ x $ belonging to each category. This is represented by a probability vector $ q(x) = [q(x_1), q(x_2), \ldots, q(x_K)] $, where each element $ q(x_i) $ signifies the probability of $ x $ taking the value $ x_i $. The sum of all probabilities in the vector equals 1:
 
 $$
 \sum_{i=1}^{K} q(x_i) = 1 
