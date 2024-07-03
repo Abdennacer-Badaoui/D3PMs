@@ -111,4 +111,18 @@ In this project, we explore the application of categorical diffusion processes t
 </p>
 
 
+Some Results : 
+
+Ground Truth : Apple pie
+
+![image](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/9c6aa00f-b3d3-4524-8f4b-426b72fea56f)
+
+Ground Truth : Beef tartare
+
+![image](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/7e38f73c-26fc-45e7-bb88-372570cb6504)
+
+
+
+
+
 
