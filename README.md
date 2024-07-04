@@ -114,17 +114,18 @@ In this project, we explore the application of categorical diffusion processes t
 ### Some Results :
 
 
-| Ground Truth |
-|---|---|
-| Beef tartare |
-| Apple pie |
-| Breakfast Burrito |
+## Ground Truth
 
-| Prediction Animation |
-|---|---|
-| ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336) |
-| ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/1866fc9c-ced2-4782-8a03-e026cdc4864f) |
-| ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/0bae076a-4819-43dc-8e61-01d9cb9e82fc) |
+* Beef tartare
+* Apple pie
+* Breakfast Burrito
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; width: 80%;">
+  <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336" alt="Prediction Animation: Beef Tartare" width="200" />
+  <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/1866fc9c-ced2-4782-8a03-e026cdc4864f" alt="Prediction Animation: Apple Pie" width="200" />
+  <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/0bae076a-4819-43dc-8e61-01d9cb9e82fc" alt="Prediction Animation: Breakfast Burrito" width="200" />
+</div>
+
 
 
 
