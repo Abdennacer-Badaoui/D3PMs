@@ -111,6 +111,11 @@ In this project, we explore the application of categorical diffusion processes t
 </p>
 
 
+### Some Results :
+
+Ground Truth : Beef Tartare
+
+![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336)
 
 
 
