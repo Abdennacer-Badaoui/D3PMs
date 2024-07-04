@@ -113,7 +113,7 @@ In this project, we explore the application of categorical diffusion processes t
 
 ### Some Results :
 
-| Ground Truth | Prediction Animation |
+| Ground Truth | Backward Predictions |
 |---|---|
 | Beef tartare | <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336" width="350" height="300"> |
 | Apple pie | <img src="https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/1866fc9c-ced2-4782-8a03-e026cdc4864f" width="350" height="300"> |
