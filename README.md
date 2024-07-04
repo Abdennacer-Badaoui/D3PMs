@@ -113,11 +113,9 @@ In this project, we explore the application of categorical diffusion processes t
 
 ### Some Results :
 
-| Ground Truth | Prediction Animation |
-|---|---|
-| Beef tartare | ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336) |
-| Apple pie | ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/1866fc9c-ced2-4782-8a03-e026cdc4864f) |
-| Breakfast Burrito | ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/0bae076a-4819-43dc-8e61-01d9cb9e82fc) |
+
+| Ground Truth| Beef tartare | Apple pie| Breakfast Bourrito |
+| Prediction Animation | ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/98c8331e-d525-4890-a72f-de8bf8333336) |![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/1866fc9c-ced2-4782-8a03-e026cdc4864f)| ![prediction_animation](https://github.com/Abdennacer-Badaoui/D3PMs/assets/106801897/0bae076a-4819-43dc-8e61-01d9cb9e82fc) |
 
 
 
