@@ -20,19 +20,19 @@ $$
 
 ### Transition Matrices
 
-The diffusion process in D3PMs is governed by a sequence of transition matrices, one for each diffusion step $t$ (from 0 to $T-1$). Each transition matrix, denoted by $Q_t$, is a square matrix of size $K \times K$. It encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $t$:
+The diffusion process in D3PMs is governed by a sequence of transition matrices, one for each diffusion step $	$ (from 0 to $T-1$). Each transition matrix, denoted by $Q_t$, is a square matrix of size $K \times K$. It encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $	$:
 
 $$
 Q_t(x_i, x_j)
 $$
 
-Here, $Q_t(x_i, x_j)$ represents the probability of transitioning from state $x_i$ to state $x_j$ in step $t$.
+Here, $Q_t(x_i, x_j)$ represents the probability of transitioning from state $x_i$ to state $x_j$ in step $	$.
 
 $$
 \sum_{j=1}^{K} Q_t(x_i, x_j) = 1, \quad \text{for all i} \in \{1, 2, \ldots, K\}
 $$
 
-These transition matrices essentially define the "corruption process" at each step. By multiplying the current data distribution $q(x_t)$ with the transition matrix $Q_t$, we obtain the distribution of the data $q(x_{t+1})$ after the noise is added in step $t$:
+These transition matrices essentially define the "corruption process" at each step. By multiplying the current data distribution $q(x_t)$ with the transition matrix $Q_t$, we obtain the distribution of the data $q(x_{t+1})$ after the noise is added in step $	$:
 
 $$
 q(x_{t+1} \mid x_t) = Q_t q(x_t)
@@ -68,8 +68,8 @@ Each element $q(x_i)$ signifies the probability of $x$ belonging to category $x_
 
 The corruption unfolds over $T$ diffusion steps ($t = 0$ to $T-1$):
 
-- In each step $t$, a transition matrix $Q_t$ (size $K \times K$) is applied.
-- This matrix encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $t$: $Q_t(x_i, x_j)$.
+- In each step $	$, a transition matrix $Q_t$ (size $K \times K$) is applied.
+- This matrix encodes the probability of transitioning from any state $x_i$ to any other state $x_j$ during step $	$: $Q_t(x_i, x_j)$.
 
 #### Mathematical Notation
 
@@ -77,12 +77,12 @@ The core of the forward process is iteratively updating the data distribution ba
 
 $$ q(x_{t+1} \mid x_{t}) = Q_t q(x_t) $$
 
-The resulting $q(x_{t+1})$ represents the distribution of the data after noise is added in step $t$.
+The resulting $q(x_{t+1})$ represents the distribution of the data after noise is added in step $	$.
 
 ### 3. Iterative Corruption and Convergence
 
 This process is repeated for all steps, with each $Q_t$ potentially different. However, there's a crucial constraint:
-- The rows of the cumulative product $M_t = Q_1 \cdot Q_2 \cdot \ldots \cdot Q_t$ (representing the overall transition across all steps up to $t$) must converge to a known stationary distribution as $t$ approaches infinity.
+- The rows of the cumulative product $M_t = Q_1 \cdot Q_2 \cdot \ldots \cdot Q_t$ (representing the overall transition across all steps up to $	$) must converge to a known stationary distribution as $	$ approaches infinity.
 
 #### Stationary Distribution
 
@@ -96,7 +96,7 @@ So far we have shown how to distort the original data distribution $q(x_{0})$ in
 
 $$ p_{\theta}(x_{t-1} \mid x_{t}) = P_{\theta} \cdot p(x_{t}) $$
 
-Note that the reverse process is conditioned on forward-looking time steps. Here the Markov transition matrix is parameterized somehow, and could actually also depend on the conditioning variable $x_{t}$. In fact, in most published diffusion models, $P_{\theta}$ is actually a neural network with arguments $x_{t}$ and $t$.
+Note that the reverse process is conditioned on forward-looking time steps. Here the Markov transition matrix is parameterized somehow, and could actually also depend on the conditioning variable $x_{t}$. In fact, in most published diffusion models, $P_{\theta}$ is actually a neural network with arguments $x_{t}$ and $	$.
 
 Once the model reverse process is known, we can use it to generate samples from the data distribution $p(x_0)$ by first sampling $x_{T} \sim \pi = p(x_{T})$, then iteratively generating the sequence:
 
